@@ -37,7 +37,7 @@ class U5W1D5ApplicationTests {
     private PostazioneService postazioneService;
 
     @Test
-    @DisplayName("Test 2, Verifica che la ricerca di una città inesistente ritorni una lista vuota")
+    @DisplayName("Test 1, Verifica che la ricerca di una città inesistente ritorni una lista vuota")
     public void ricercaCittaInesistenteTornaListaVuota() {
         // inserisco una città fasulla omaggio a ffx To Zanarkand xD
         List<Postazione> risultato = postazioneService.cercaPostazioni(TipoPostazione.PRIVATO, "Zanarkand");
@@ -45,7 +45,7 @@ class U5W1D5ApplicationTests {
     }
 
     @Test
-    @DisplayName("Test 1, Verifico che la ricerca di un username funzioni correttamente e non sia null")
+    @DisplayName("Test 2, Verifico che la ricerca di un username funzioni correttamente e non sia null")
     public void trovaUtentePerUsernameEsistente() {
         Utente utente = utenteService.trovaPerUsername("mario_rossi");
         //mi aspetto che non sia null

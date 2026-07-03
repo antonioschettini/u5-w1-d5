@@ -14,6 +14,7 @@ import antonioschettini.u5_w1_d5.services.UtenteService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -21,6 +22,7 @@ import java.util.List;
 
 @Component
 @Slf4j
+@Profile("!test") // spengo il runner mentre eseguo Junit
 public class PrenotazioniRunner implements CommandLineRunner {
     // inietto i service per poi fare automaticamente il requiredargsconstr
     private UtenteService utenteService;

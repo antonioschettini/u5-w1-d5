@@ -20,7 +20,7 @@ public class Postazione {
     private String descrizione;
 
     @Enumerated(EnumType.STRING)
-    private TipoPostazione tipoPostazione;
+    private TipoPostazione tipo;
 
     @Column(name = "numero_max_occupanti")
     private int numeroMaxOccupanti;
@@ -30,9 +30,9 @@ public class Postazione {
     @JoinColumn(name = "edificio_id")
     private Edificio edificio;
 
-    public Postazione(String descrizione, TipoPostazione tipoPostazione, int numeroMaxOccupanti, Edificio edificio) {
+    public Postazione(String descrizione, TipoPostazione tipo, int numeroMaxOccupanti, Edificio edificio) {
         this.descrizione = descrizione;
-        this.tipoPostazione = tipoPostazione;
+        this.tipo = tipo;
         this.numeroMaxOccupanti = numeroMaxOccupanti;
         this.edificio = edificio;
     }
